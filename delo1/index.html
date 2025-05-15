@@ -128,6 +128,12 @@
   </style>
 </head>
 <body>
+<script>
+  function toggleNotice() {
+    const content = document.getElementById("notice-content");
+    content.style.display = (content.style.display === "none") ? "block" : "none";
+  }
+</script>
   <div class="page-wrapper">
     <!-- Верхний блок: заголовок + кнопка Telegram -->
     <div class="block header">
@@ -138,6 +144,18 @@
         </a>
       </div>
     </div>
+<div class="block" style="font-size: 0.9em; color: #ccc; margin-top: 10px;">
+  <button onclick="toggleNotice()" style="background:none;border:none;color:#ccc;font-size:1rem;font-weight:bold;cursor:pointer;margin-bottom:10px;">
+    Информация от офицера Джеймса Миллера (нажмите, чтобы свернуть/развернуть)
+  </button>
+  <div id="notice-content" style="display: none;">
+    <p><strong>Офицер Джеймс Миллер:</strong></p>
+    <p>Детективы, в связи с надвигающимся ураганом и катастрофически ограниченным временем на поиски Эшли, все отчёты по её делу составляются в чрезвычайно сжатые сроки.</p>
+    <p>В связи с этим в тексте возможны орфографические ошибки и опечатки. Чтобы избежать недоразумений при закрытии ДЕЛА, прошу вас сообщать о любых найденных неточностях в службу поддержки.</p>
+    <p>За внимательность вы получите дополнительный балл в финале ДЕЛА. Благодарю за сотрудничество.</p>
+  </div>
+</div>
+</div>
     <!-- Блок "Дело Эшли Джонсон" с инструктажем -->
     <div class="block audio-case-block" id="audioCaseBlock">
       <h2>Дело Эшли Джонсон</h2>
